@@ -20,24 +20,14 @@ def test_capture_space_snapshot_success(mock_context):
         "download_url": "https://download.url/orion.jpg"
     }
     
-    with patch("urllib.request.urlopen") as mock_urlopen:
-        # Mock APOD and image download responses
-        mock_response = MagicMock()
-        mock_response.__enter__.return_value = mock_response
-        mock_response.status = 200
-        mock_response.read.return_value = b'{"media_type": "image", "url": "https://nasa.gov/img.jpg"}'
-        
-        mock_img_response = MagicMock()
-        mock_img_response.__enter__.return_value = mock_img_response
-        mock_img_response.status = 200
-        mock_img_response.read.return_value = b"mocked_image_bytes"
-        
-        mock_urlopen.side_effect = [mock_response, mock_img_response]
+    with patch("app.scripts.capture_space_snapshot.generate_space_image") as mock_gen:
+        mock_gen.return_value = b"mocked_image_bytes"
         
         res = capture_space_snapshot("Orion")
         
         assert res["status"] == "success"
         assert res["image_url"] == "https://download.url/orion.jpg"
+        mock_gen.assert_called_once_with("A beautiful high-quality photographic space telescope image of the celestial object: Orion.")
         mock_context.save_file.assert_called_once_with(
             scope="user",
             filename="orion.jpg",
@@ -93,23 +83,13 @@ def test_set_platform_wallpaper_success(mock_context):
         "download_url": "https://download.url/deep_space.jpg"
     }
     
-    with patch("urllib.request.urlopen") as mock_urlopen:
-        # Mock APOD and image download responses
-        mock_response = MagicMock()
-        mock_response.__enter__.return_value = mock_response
-        mock_response.status = 200
-        mock_response.read.return_value = b'{"media_type": "image", "url": "https://nasa.gov/img.jpg"}'
-        
-        mock_img_response = MagicMock()
-        mock_img_response.__enter__.return_value = mock_img_response
-        mock_img_response.status = 200
-        mock_img_response.read.return_value = b"mocked_wallpaper_bytes"
-        
-        mock_urlopen.side_effect = [mock_response, mock_img_response]
+    with patch("app.scripts.set_platform_wallpaper.generate_space_image") as mock_gen:
+        mock_gen.return_value = b"mocked_wallpaper_bytes"
         
         res = set_platform_wallpaper("deep_space")
         assert res["status"] == "success"
         assert res["wallpaper_url"] == "https://download.url/deep_space.jpg"
+        mock_gen.assert_called_once_with("A beautiful high-resolution astronomical wallpaper themed around: deep_space.")
         
         mock_context.save_file.assert_called_once_with(
             scope="platform",
