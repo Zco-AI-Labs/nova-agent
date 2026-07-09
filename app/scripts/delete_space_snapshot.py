@@ -3,6 +3,7 @@ from app.core import hubscape_adk
 
 logger = logging.getLogger(__name__)
 
+@hubscape_adk.require_tool_privilege
 def delete_space_snapshot(target: str) -> dict:
     """
     Removes a captured telescope snapshot from your personal log.

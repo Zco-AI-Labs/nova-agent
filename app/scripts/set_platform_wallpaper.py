@@ -7,6 +7,7 @@ from app.scripts.capture_space_snapshot import generate_space_image
 
 logger = logging.getLogger(__name__)
 
+@hubscape_adk.require_tool_privilege
 def set_platform_wallpaper(wallpaper_name: str) -> dict:
     """
     Uploads a new default background wallpaper visible to all users of the platform.
