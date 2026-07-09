@@ -1,0 +1,46 @@
+{
+  "type": "container",
+  "props": {
+    "direction": "vertical",
+    "gap": "md",
+    "padding": "md"
+  },
+  "children": [
+    {
+      "type": "text",
+      "props": {
+        "text": "Deep-Space Observation Captured",
+        "size": "lg",
+        "weight": "bold",
+        "color": "indigo"
+      }
+    },
+    {
+      "type": "image",
+      "props": {
+        "url": "{{data.image_url}}",
+        "alt": "Telescope capture of {{data.target}}",
+        "aspectRatio": "16:9",
+        "borderRadius": "md"
+      }
+    },
+    {
+      "type": "text",
+      "props": {
+        "text": "Target: {{data.target}}",
+        "size": "md",
+        "weight": "medium"
+      }
+    },
+    {
+      "type": "button",
+      "props": {
+        "label": "Delete Snapshot",
+        "actionUrl": "agent://delete_space_snapshot?target={{data.target}}",
+        "styling": {
+          "colorTheme": "red"
+        }
+      }
+    }
+  ]
+}

@@ -30,8 +30,8 @@ from app.app_utils.vertex_gemini import get_model
 
 root_agent = AdkAgent(
     model=get_model("gemini-2.5-flash"),
-    name="custom_agent",
-    description="Managed GEAP agent.",
+    name="nova_agent",
+    description="Astrophotography and space event observatory assistant.",
     instruction=system_instruction,
     tools=tools
 )

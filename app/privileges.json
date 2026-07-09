@@ -2,8 +2,23 @@
   "privileges": {
     "1": {
       "name": "ADMIN",
-      "description": "Allows the full capability of the agent",
-      "tools": []
+      "description": "Allows full capability of the agent, including platform modifications",
+      "tools": [
+        "capture_space_snapshot",
+        "delete_space_snapshot",
+        "analyze_space_snapshot",
+        "register_platform_event",
+        "set_platform_wallpaper"
+      ]
+    },
+    "2": {
+      "name": "USER",
+      "description": "Allows capturing, deleting, and analyzing personal space snapshots",
+      "tools": [
+        "capture_space_snapshot",
+        "delete_space_snapshot",
+        "analyze_space_snapshot"
+      ]
     }
   }
 }

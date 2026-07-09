@@ -1,0 +1,52 @@
+{
+  "type": "container",
+  "props": {
+    "direction": "vertical",
+    "gap": "sm",
+    "padding": "md"
+  },
+  "children": [
+    {
+      "type": "text",
+      "props": {
+        "text": "Platform Astronomy Alert",
+        "size": "lg",
+        "weight": "bold",
+        "color": "amber"
+      }
+    },
+    {
+      "type": "container",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm",
+        "align": "center"
+      },
+      "children": [
+        {
+          "type": "text",
+          "props": {
+            "text": "📅 Date: {{data.event_date}}",
+            "size": "sm",
+            "weight": "medium"
+          }
+        },
+        {
+          "type": "text",
+          "props": {
+            "text": "📌 ID: {{data.event_id}}",
+            "size": "sm",
+            "color": "secondary"
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "props": {
+        "text": "Event: {{data.event_name}}",
+        "size": "md"
+      }
+    }
+  ]
+}

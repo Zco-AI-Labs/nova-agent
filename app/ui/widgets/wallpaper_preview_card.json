@@ -1,0 +1,35 @@
+{
+  "type": "container",
+  "props": {
+    "direction": "vertical",
+    "gap": "md",
+    "padding": "md"
+  },
+  "children": [
+    {
+      "type": "text",
+      "props": {
+        "text": "Platform Wallpaper Set",
+        "size": "lg",
+        "weight": "bold",
+        "color": "violet"
+      }
+    },
+    {
+      "type": "image",
+      "props": {
+        "url": "{{data.wallpaper_url}}",
+        "alt": "Platform Background Preview",
+        "aspectRatio": "16:9",
+        "borderRadius": "md"
+      }
+    },
+    {
+      "type": "text",
+      "props": {
+        "text": "Successfully uploaded background: {{data.wallpaper_name}}",
+        "size": "sm"
+      }
+    }
+  ]
+}

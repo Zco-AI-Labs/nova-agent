@@ -1,0 +1,51 @@
+{
+  "type": "container",
+  "props": {
+    "direction": "vertical",
+    "gap": "sm",
+    "padding": "md"
+  },
+  "children": [
+    {
+      "type": "text",
+      "props": {
+        "text": "Astrophotography Analysis Report",
+        "size": "lg",
+        "weight": "bold",
+        "color": "emerald"
+      }
+    },
+    {
+      "type": "container",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        {
+          "type": "text",
+          "props": {
+            "text": "Target Object: {{data.target}}",
+            "size": "md",
+            "weight": "medium"
+          }
+        },
+        {
+          "type": "text",
+          "props": {
+            "text": "File Size: {{data.file_size_kb}} KB",
+            "size": "sm",
+            "color": "secondary"
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "props": {
+        "text": "{{data.analysis}}",
+        "size": "sm"
+      }
+    }
+  ]
+}
