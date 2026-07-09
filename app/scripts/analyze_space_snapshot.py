@@ -3,7 +3,6 @@ from app.core import hubscape_adk
 
 logger = logging.getLogger(__name__)
 
-@hubscape_adk.require_tool_privilege
 def analyze_space_snapshot(target: str) -> dict:
     """
     Retrieves and analyzes a captured telescope snapshot from your personal log using get_file.

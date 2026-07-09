@@ -4,7 +4,6 @@ from app.core import hubscape_adk
 
 logger = logging.getLogger(__name__)
 
-@hubscape_adk.require_tool_privilege
 def register_platform_event(event_name: str, event_date: str) -> dict:
     """
     Adds a shared space event (e.g. meteor shower) to the platform calendar.
