@@ -18,7 +18,7 @@
     {
       "type": "image",
       "props": {
-        "url": "{{image_url}}",
+        "src": "{{image_url}}",
         "alt": "Telescope capture of {{target}}",
         "aspectRatio": "16:9",
         "borderRadius": "md"

@@ -18,7 +18,7 @@
     {
       "type": "image",
       "props": {
-        "url": "{{wallpaper_url}}",
+        "src": "{{wallpaper_url}}",
         "alt": "Platform Background Preview",
         "aspectRatio": "16:9",
         "borderRadius": "md"
