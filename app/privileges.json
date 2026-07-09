@@ -1,9 +1,9 @@
 {
   "privileges": {
     "1": {
-      "name": "Custom Agent Manager",
+      "name": "Astronomy Photographer Expert",
       "description": "Allows the full capability of the agent",
-      "tools": []
+      "tools": ["delete_space_snapshot", "capture_space_snapshot", "delete_space_snapshot"]
     }
   }
 }
