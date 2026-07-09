@@ -25,7 +25,7 @@
         {
           "type": "text",
           "props": {
-            "text": "Target Object: {{data.target}}",
+            "text": "Target Object: {{target}}",
             "size": "md",
             "weight": "medium"
           }
@@ -33,7 +33,7 @@
         {
           "type": "text",
           "props": {
-            "text": "File Size: {{data.file_size_kb}} KB",
+            "text": "File Size: {{file_size_kb}} KB",
             "size": "sm",
             "color": "secondary"
           }
@@ -43,7 +43,7 @@
     {
       "type": "text",
       "props": {
-        "text": "{{data.analysis}}",
+        "text": "{{analysis}}",
         "size": "sm"
       }
     }

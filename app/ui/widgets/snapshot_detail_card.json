@@ -18,8 +18,8 @@
     {
       "type": "image",
       "props": {
-        "url": "{{data.image_url}}",
-        "alt": "Telescope capture of {{data.target}}",
+        "url": "{{image_url}}",
+        "alt": "Telescope capture of {{target}}",
         "aspectRatio": "16:9",
         "borderRadius": "md"
       }
@@ -27,7 +27,7 @@
     {
       "type": "text",
       "props": {
-        "text": "Target: {{data.target}}",
+        "text": "Target: {{target}}",
         "size": "md",
         "weight": "medium"
       }
@@ -36,7 +36,7 @@
       "type": "button",
       "props": {
         "label": "Delete Snapshot",
-        "actionUrl": "agent://delete_space_snapshot?target={{data.target}}",
+        "actionUrl": "agent://delete_space_snapshot?target={{target}}",
         "styling": {
           "colorTheme": "red"
         }
