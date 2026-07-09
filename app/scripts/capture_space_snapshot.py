@@ -41,9 +41,7 @@ def generate_space_image(prompt: str) -> bytes:
 @hubscape_adk.require_tool_privilege
 def capture_space_snapshot(target: str) -> dict:
     """
-    Captures a telescope image of a target celestial object (e.g., 'andromeda', 'orion')
-    by fetching the NASA Astronomy Picture of the Day (APOD) image (or a public NASA image library url),
-    downloading the raw bytes, and saving it to the user's personal GCS space.
+    Generates and captures a telescope image of a target celestial object (e.g., planet, nebula, galaxy like 'mars', 'andromeda', 'orion') and saves it to the user's personal GCS space. Call this whenever the user asks to see or show an image or snapshot of a space object.
 
     Args:
         target: The name of the celestial target to snapshot.

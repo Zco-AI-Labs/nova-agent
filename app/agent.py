@@ -31,7 +31,7 @@ from app.app_utils.vertex_gemini import get_model
 root_agent = AdkAgent(
     model=get_model("gemini-2.5-flash"),
     name="nova_agent",
-    description="Astrophotography and space event observatory assistant.",
+    description="An astrophotography and observatory assistant that captures space snapshots using Gemini, analyzes celestial imagery from GCS, manages user log files, registers global platform calendar events, and updates platform-wide wallpapers.",
     instruction=system_instruction,
     tools=tools
 )
